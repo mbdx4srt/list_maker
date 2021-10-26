@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Univers for BP','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+
+}
+
+.listmakerold {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 520px;
+    min-height: 600px;
+    background: #161a2b;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+}
+
+.listmaker {
+    /*position: relative;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*min-width: 0;*/
+    /*word-wrap: break-word;*/
+    /*background-color: #fff;*/
+    /*background-clip: border-box;*/
+    /*border: 1px solid rgba(0, 0, 0, 0.125);*/
+    /*border-radius: 0.25rem;*/
+    margin: 5px;
+    /*width: 25rem;*/
+}
+h1 {
+    padding: 16px;
+    color: #d2d1d1;
+    font-size: 24px;
+}
+
+.highlighted {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.list-form {
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+.list-input {
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #d2d1d1;
+    outline: none;
+    width: 75%;
+    background: transparent;
+    color: #767676;
+}
+
+.list-input::placeholder {
+    color: #e2e2e2;
+}
+
+.list-button {
+    padding: 16px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    outline: none;
+    background-color: d2d1d1;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+
+
+.list-button.edit {
+    background-color: #fff084;
+    color: #161a2b;
+    word-wrap: normal;
+    padding: 16px 22px;
+    width: 25%;
+}
+
+.listitem-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+
+.listitem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff084;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin: 5px;
+    padding: 16px;
+    font-size: 16px;
+    width: 25rem;
+}
+
+
+.icons {
+    padding-top:10px;
+    align-items: first;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-icon {
+    margin-right: 5px;
+    color: #a8a8a8;
+}
+
+.edit-icon {
+    color: #a8a8a8;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.download-button {
+    padding: 16px;
+    background-color: lightskyblue;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    margin: 5px;
+}
