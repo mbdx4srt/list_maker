@@ -44,8 +44,8 @@ h1 {
 }
 
 .highlighted {
-    text-decoration: line-through;
-    opacity: 0.4;
+        text-decoration: line-through;
+        opacity: 0.4;
 }
 
 .list-form {
