@@ -9,7 +9,8 @@ function ListList() {
         if (!listitem.text || /^\s*$/.test(listitem.text)){
             return
         }
-        const newListItems = [listitem,...listList]
+        // const newListItems = [listitem,...listList]
+        const newListItems = [...listList,listitem]
 
         setList(newListItems)
         console.log(...listList)
