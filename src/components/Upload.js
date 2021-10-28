@@ -7,15 +7,13 @@ function Upload({addListItems}) {
         const listitems = []
         input.forEach(inputitem => {
             const listitem = {
-            id : Math.floor(Math.random() * 10000),
-            text : inputitem}
+                id: Math.floor(Math.random() * 10000),
+                text: inputitem
+            }
             console.log(listitem)
             listitems.push(listitem)
         });
-
         addListItems(listitems)
-
-
     }
 
 
@@ -32,7 +30,8 @@ function Upload({addListItems}) {
 
     return (<div className={'buttonsh'}>
             <label htmlFor="files" className={'download-button'}>Upload</label>
-            <input id='files'  type="file" className={'download-button'} style={{visibility: "hidden"}}onChange={(e) => showFile(e)}/>
+            <input id='files' type="file" className={'download-button'} style={{visibility: "hidden"}}
+                   onChange={(e) => showFile(e)}/>
         </div>
     )
 }

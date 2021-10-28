@@ -11,7 +11,6 @@ function ListList() {
         if (!listitem.text || /^\s*$/.test(listitem.text)){
             return
         }
-        // const newListItems = [listitem,...listList]
         const newListItems = [...listList,listitem]
 
         setList(newListItems)
@@ -31,7 +30,6 @@ function ListList() {
             })
         setList(newListItems)
     }
-
 
     const updateListItem = (listitemId, newValue) => {
         if (!newValue.text || /^\s*$/.test(newValue.text)){
