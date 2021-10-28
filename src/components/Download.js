@@ -23,9 +23,11 @@ function Download({listList}) {
 
     return (
         <div>
+            <div>>
             <button onClick={downloadTextFile}
             className={'download-button'}
             >Download</button>
+            </div>
         </div>
     );
 }

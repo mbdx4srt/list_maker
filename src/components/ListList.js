@@ -2,6 +2,8 @@ import React,{useState} from 'react'
 import ListForm from "./ListForm";
 import ListItem from "./ListItem";
 import Download from "./Download";
+import Upload from "./Upload";
+
 function ListList() {
     const[listList, setList] = useState([])
 
@@ -15,6 +17,21 @@ function ListList() {
         setList(newListItems)
         console.log(...listList)
     }
+
+    const addListItems = listitems =>{
+
+        const newListItems = []
+        listitems.forEach(listitem => {
+
+            if (!listitem.text || /^\s*$/.test(listitem.text)){
+                return
+            }
+            newListItems.push(listitem)
+
+            })
+        setList(newListItems)
+    }
+
 
     const updateListItem = (listitemId, newValue) => {
         if (!newValue.text || /^\s*$/.test(newValue.text)){
@@ -50,7 +67,10 @@ function ListList() {
                       updateListItem={updateListItem}
             />
             </div>
+            <div className={'buttons'}>
             <Download listList={listList}/>
+            <Upload addListItems={addListItems}/>
+            </div>
         </div>
     );
 }
