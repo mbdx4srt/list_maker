@@ -17,12 +17,14 @@ function ListForm(props) {
 
     const handleSubmit = e => {
         e.preventDefault();
-
+        props.setCount(props.counter+1)
         props.onSubmit({
-            id: Math.floor(Math.random() * 10000),
+           // id: Math.floor(Math.random() * 10000),
+            id: props.counter,
             text: input
         });
         setInput('');
+        console.log(props.counter)
     };
 
     return (

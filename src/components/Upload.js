@@ -1,19 +1,22 @@
 import React from 'react';
 
-function Upload({addListItems}) {
-
+function Upload(props) {
 
     const logList = (input) => {
         const listitems = []
+        var locCount = props.counter
         input.forEach(inputitem => {
+            locCount = locCount+1
             const listitem = {
-                id: Math.floor(Math.random() * 10000),
+                id: locCount,
                 text: inputitem
             }
             console.log(listitem)
+
             listitems.push(listitem)
         });
-        addListItems(listitems)
+        props.addListItems(listitems)
+        props.setCount(locCount)
     }
 
 

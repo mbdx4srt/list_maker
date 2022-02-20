@@ -6,6 +6,7 @@ import Upload from "./Upload";
 
 function ListList() {
     const[listList, setList] = useState([])
+    const[count, setCount] = useState(0)
 
     const addListItem = listitem => {
         if (!listitem.text || /^\s*$/.test(listitem.text)){
@@ -57,7 +58,7 @@ function ListList() {
     return (
         <div>
             {/*<h1>List Maker</h1>*/}
-            <ListForm onSubmit={addListItem}/>
+            <ListForm onSubmit={addListItem} counter={count} setCount={setCount}/>
             <div className='board'>
             <ListItem listList={listList}
                       highlightListitem={highlightListitem}
@@ -67,7 +68,7 @@ function ListList() {
             </div>
             <div className={'buttons'}>
             <Download listList={listList}/>
-            <Upload addListItems={addListItems}/>
+            <Upload addListItems={addListItems} counter={count} setCount={setCount}/>
             </div>
         </div>
     );
